@@ -1,0 +1,15 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+h1 {
+  font-size: 35px;
+  color: #333;
+  background-color: #ddec8a;
+  text-align: center;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+}
