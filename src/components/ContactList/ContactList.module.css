@@ -1,8 +1,17 @@
-.contactsList {
-  list-style-type: none;
+.contactList {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 16px;
+    flex-direction: column;
+  gap: 20px;
+  background-color: #ece0a0;
 }
 
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  justify-content: space-between;
+  border: 2px solid #2f2828;
+  border-radius: 12px;
+  padding: 8px;
+  background-color: #ece0a0;
+}

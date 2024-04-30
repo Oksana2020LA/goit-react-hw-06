@@ -1,14 +1,21 @@
+.searchWrap {
+  margin-bottom: 20px;
+}
+
+.searchTitle {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
 .searchInput {
-  width: 50%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 35px;
-  font-size: 16px;
-  margin: 10px 0 10px 0;
-  
+  width: 250px;
+  border: 2px solid #c9c909;
+  border-radius: 8px;
+  outline: transparent;
+  padding: 8px;
+  transition: border-color 300ms ease;
 }
 
 .searchInput:focus {
-  outline: none;
-  border-color: #178430;
+  border-color: #98f497;
 }

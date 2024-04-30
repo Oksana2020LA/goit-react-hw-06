@@ -1,42 +1,39 @@
-.contact {
-display: flex;
+.contactBtn {
+  display: flex;
   justify-content: center;
-
-  background-color: #ece0a0;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  gap: 10px;
-}
-
-.contact:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-.contact p {
-  margin: 10px 0;
-  font-size: 16px;
-  color: #333333;
-  
-}
-
-.contact p:first-child {
-  font-weight: bold;
-}
-
-.deleteBtn {
-  background-color: #dc3545;
-  color: #ffffff;
+  align-items: center;
   border: none;
-  padding: 8px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  border-radius: 10px;
+  background-color: #696f1a;
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 8px;
+  transition: background-color 300ms ease;
 }
 
-.deleteBtn:hover {
-  background-color: #c82333;
+.contactBtn:hover,
+.contactBtn:focus {
+  background-color: #13541b;
+}
+
+.contactName {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.contactName>svg {
+  width: 24px;
+  margin-right: 5px;
+}
+
+.contactNumber {
+  display: flex;
+  align-items: center;
+}
+
+.contactNumber>svg {
+  width: 24px;
+  margin-right: 5px;
 }

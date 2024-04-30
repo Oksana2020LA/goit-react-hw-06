@@ -1,24 +1,32 @@
-import { ImPhone, ImUser } from 'react-icons/im'
-import css from './Contact.module.css'
-export default function Contact({ contact: { name, id, number }, onDelete }) {
-	return (
-		<li className={css.contact}>
-			<p>
-				<ImUser />
-				{name}
-			</p>
-			<p>
-				<ImPhone />
-				{number}
-			</p>
-			<button
-				className={css.deleteBtn}
-				onClick={() => {
-					onDelete(id)
-				}}
-			>
-				Delete
-			</button>
-		</li>
-	)
+import css from "./Contact.module.css";
+import { BsFillPersonFill } from "react-icons/bs";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { useDispatch } from "react-redux";
+import { deleteContact } from "../../redux/contactsSlice";
+
+function Contact({ contacts: { name, number, id } }) {
+  const dispatch = useDispatch();
+
+  const onDeleteContact = (contactId) => {
+    dispatch(deleteContact(contactId));
+  };
+
+  return (
+    <>
+      <div>
+        <p className={css.contactName}>
+          <BsFillPersonFill />
+          {name}
+        </p>
+        <p className={css.contactNumber}>
+          <BsFillTelephoneFill /> {number}
+        </p>
+      </div>
+      <button className={css.contactBtn} onClick={() => onDeleteContact(id)}>
+        Delete
+      </button>
+    </>
+  );
 }
+
+export default Contact;

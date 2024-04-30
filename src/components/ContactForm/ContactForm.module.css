@@ -1,62 +1,58 @@
 .form {
-  background-color: #d5d2ab;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  width: max-content;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  gap: 8px;
+  border: 2px solid #2f2828;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
-.form:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-.label {
-  margin-bottom: 8px;
-  font-weight: bold;
-  color: #333333;
-}
-
-.inputField {
-  width: 100%;
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #cccccc;
-  /* transition: border-color 0.3s ease; */
-}
-
-.inputField:focus {
-  outline: none;
-  border-color: #22ff00;
-}
-
-.error {
-  color: #dc3545;
+.formTitle {
   font-size: 14px;
-  margin-top: 4px;
-    display: inline-flex;
-      justify-content: right;
+  color: #5f5a5a;
 }
 
-.submitBtn {
-
-}
-
-.submitBtn {
+.formInput {
   width: 200px;
+  border: 2px solid #2f2828;
+  border-radius: 8px;
+  outline: transparent;
+  padding: 8px;
+  transition: border-color 300ms ease;
+}
+
+.formInput:focus {
+  border-color: #c6690c;
+  background-color: transparent;
+}
+
+.errorMassage {
+  font-size: 8px;
+  text-transform: uppercase;
+  color: #e02e2e;
+}
+
+.formBtn {
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
   background-color: #7d994d;
   color: #ffffff;
-  border: none;
-  margin-top: 10px;
-  padding: 10px 20px;
-  border-radius: 35px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 12px;
+  margin: 0 auto;
+  transition: background-color 300ms ease;
 }
 
-.submitBtn:hover {
-  background-color: #9bbe80;
+.formBtn:hover,
+.formBtn:focus {
+  background-color: #13541b;
 }

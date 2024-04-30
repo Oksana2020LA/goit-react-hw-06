@@ -1,70 +1,33 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './components/App'
+import './index.css'
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+import {
+  Provider
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+from 'react-redux'
+
+import {
+  store,
+  persistor
 }
 
-ul[class],
-ol[class] {
-  padding: 0;
+from './redux/store'
+
+import {
+  PersistGate
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
+from 'redux-persist/integration/react'
 
-body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
+ReactDOM.createRoot(document.getElementById('root')).render(<React.StrictMode> <Provider store= {
+    store
+  }
 
-ul[class],
-ol[class] {
-  list-style: none;
-}
+  > <PersistGate persistor= {
+    persistor
+  }
 
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-img {
-  max-width: 100%;
-  /* display: block; */
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
+  > <App /> </PersistGate> </Provider> </React.StrictMode>)
